@@ -42,4 +42,19 @@ public class NinjaControlador : MonoBehaviour {
 	}
 
 
+
+	void OnCollisionEnter2D(Collision2D coll) {
+
+		Debug.Log("Colision");
+
+	}
+
+
+	void OnTriggerEnter2D(Collider2D other) {
+
+		if (other.gameObject.tag == "Moneda")
+			Destroy (other.gameObject);
+
+	}
+
 }
